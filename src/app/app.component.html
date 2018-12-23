@@ -1,0 +1,25 @@
+<app-header-rentas></app-header-rentas>
+<div class="rentas-container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-banner></app-banner>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <app-botonera (onChangeSection)="changeSection($event)"></app-botonera>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-seccion [name]="seccion"></app-seccion>
+    </div>
+  </div>
+  
+</div>
+
+<br><br> <!--agrega un espaciado para que el footer no tape el contenido de abajo-->
+<app-footer-rentas></app-footer-rentas>
+

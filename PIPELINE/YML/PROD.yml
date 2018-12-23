@@ -1,0 +1,30 @@
+nombreTarea: PROD-IMPUESTOSFRONT
+nombre: IMPUESTOSFRONT
+grupo: grupo3-prod
+image: registro.kolektor.com.ar:5000/ImpuestosFront:VERSION
+
+env:
+        RUNTIME_ENVIRONMENT: 'PROD'
+
+etchosts:
+         lb-internal: '10.42.4.149'
+         wsafip: '10.42.4.149'
+         wsktkweb: '10.42.4.149'
+         wsprocuradores: '10.42.4.149'
+
+nodos:
+     - nodo: 'ImpuestosFront01'
+       volumen: '["/var/log/dockerContainers/containers/j8eap70_impuestosFront01:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8080:8080", "0.0.0.0:10000:9990"]'
+     - nodo: 'impuestosFront02'
+       volumen: '["/var/log/dockerContainers/containers/j8eap70_impuestosFront02:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8180:8080", "0.0.0.0:10001:9990"]'
+     - nodo: 'impuestosFront03'
+       volumen: '["/var/log/dockerContainers/containers/j8eap70_impuestosFront03:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8380:8080", "0.0.0.0:10002:9990"]'
+     - nodo: 'impuestosFront04'
+       volumen: '["/var/log/dockerContainers/containers/j8eap70_impuestosFront04:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8480:8080", "0.0.0.0:10003:9990"]'
+     - nodo: 'impuestosFront05'
+       volumen: '["/var/log/dockerContainers/containers/j8eap70_impuestosFront05:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8580:8080", "0.0.0.0:10004:9990"]'

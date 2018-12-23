@@ -1,0 +1,32 @@
+server {
+  listen 80 default_server;
+
+  root /srv/www/;
+  index index.html index.htm;
+
+  server_name localhost;
+
+
+
+  location /ImpuestosFront/ {
+    if (!-e $request_filename){
+        rewrite ^(.*)$ /ImpuestosFront/;
+    }
+  }
+
+
+  location / {
+
+    if ($http_referer ~ "^(.*)ImpuestosFront(.*)"){
+		rewrite ^(.*)$ /ImpuestosFront/$1; break;
+
+     }
+
+    rewrite ^(/.*)$ /ImpuestosFront/$1;
+
+    try_files $uri $uri/ =404;
+  }
+
+
+
+ }

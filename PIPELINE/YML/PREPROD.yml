@@ -1,0 +1,18 @@
+nombreTarea: PREPROD-IMPUESTOSFRONT
+nombre: IMPUESTOSFRONT
+grupo: docker-preprod
+image: registro.kolektor.com.ar:5000/ImpuestosFront:VERSION
+
+env:
+        RUNTIME_ENVIRONMENT: 'PREPROD'
+
+etchosts:
+         lb-internal: '10.42.4.217'
+         wsafip: '10.42.4.217'
+         wsktkweb: '10.42.4.217'
+         wsprocuradores: '10.42.4.217'
+
+nodos:
+     - nodo: 'impuestosFront01'
+       volumen: '["/var/log/dockerContainers/containers/impuestosFront01:/opt/EAP/standalone/log/","/opt/zipass:/opt/zipass"]'
+       puerto: '["0.0.0.0:8680:8080"]'

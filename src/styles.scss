@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Montserrat,sans-serif
+}
+
+.rentas-container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.spacing-top {
+    margin-top: 5px;
+}
+
+
+.row {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.debito { 
+    background-color: #0070C0;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: #FFFF33;
+}

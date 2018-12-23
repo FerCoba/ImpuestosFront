@@ -1,0 +1,12 @@
+.acordeon {
+    margin: 0 5px;
+
+    .acordeon-header {
+        user-select: none;
+        padding: 5px;
+        cursor: pointer;
+        .titulo {
+            font-weight: bold;
+        }
+    }
+}

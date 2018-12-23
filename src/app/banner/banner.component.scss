@@ -1,0 +1,23 @@
+.banner {
+    height: 64px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0 7px 0;
+    background: #4e99ec; /* Old browsers */
+    background: -moz-linear-gradient(left, #4e99ec 0%, #0d5da8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #4e99ec 0%,#0d5da8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #4e99ec 0%,#0d5da8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e99ec', endColorstr='#0d5da8',GradientType=1 ); /* IE6-9 */
+ 
+
+
+    .item {
+          
+  
+    }
+
+ 
+}
+

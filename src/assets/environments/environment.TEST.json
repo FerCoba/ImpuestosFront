@@ -1,0 +1,8 @@
+{
+    "name": "preprod",
+    "production": true,
+    "settings": {
+      "MercadoPagoApiUrl": "https://apptest.rentascordoba.gob.ar/WSRestMercadoPago/",
+      "environment": "TEST"
+    }
+  }

@@ -1,0 +1,61 @@
+.boton {
+    background-color: #d7dbdf;
+    color: #FFFFFF;
+    text-align: center;
+    height: 85px;
+    cursor: pointer;
+    padding: 15px;
+    margin-bottom: 3px !important;
+
+    .icono {
+        .ico {
+            font-size: 50px;
+            transition: font-size .3s;
+        }
+
+        .text-ico {
+            line-height: 110px;
+            transition: line-height .3s;
+        }
+    }
+
+    &:hover, &.selected {
+        line-height: 10px;
+        padding: 15px;
+
+        .icono {
+            .ico {
+                font-size: 30px;
+            }
+
+            .text-ico {
+                font-size: 11px;
+                line-height: 11px;
+            }
+        }
+
+        &.rojo {
+            background-color: #E67864;
+        }
+
+        &.verde {
+            background-color: #6ebe64;
+        }
+
+        &.celeste {
+            background-color: #75c4c6;
+        }
+    }
+
+    &.first {
+        margin: 0 -14px 0 -15px;
+    }
+
+    &.last {
+        margin: 0 -15px 0 -14px;
+    }
+
+    &:not(.first):not(.last) {
+        margin: 0 -14px;
+    }
+}

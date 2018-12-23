@@ -1,0 +1,9 @@
+FROM johnpapa/angular-cli
+
+ADD . /workspace
+
+WORKDIR /workspace
+
+RUN npm install node-sass@4.9.0 &&\
+    ng build
+ENTRYPOINT ["ng","serve", "--host","0.0.0.0"]

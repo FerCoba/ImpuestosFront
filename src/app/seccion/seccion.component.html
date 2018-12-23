@@ -1,0 +1,152 @@
+<div class="panel panel-default spacing-top">
+  <div class="panel-heading">
+    {{seccionName}}
+  </div>
+  <div class="content-seccion">
+    <ng-container *ngIf="seccionName === 'Inmobiliario'">
+        <div class="contenido">A partir de 2019 el impuesto inmobiliario se pagará en 12 cuotas, la primera vencerá en febrero y la última en enero de 2020. </div>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 6" [id]="6" [color]="'rojo'" [titulo]="'PAGÁ EL 2019'">
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá N° de cuenta</label></div>
+          <div class="campo"> <input type="text" class="form-control" [(ngModel)]="idObjInmueble"></div>
+          <div class="boton"><button class="btn-primary rojo" (click)="consultarDeuda('I', idObjInmueble)">Consultar</button> </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 7" [id]="7" [color]="'rojo'" [titulo]="tituloDebitoAutomatico">
+        <div class="contenido">Podés adherir el impuesto con el CBU de tu cuenta bancaria, tarjeta de crédito o –en el
+          caso de empleados y jubilados provinciales- el recibo digital.</div>
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá N° de cuenta</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary rojo">Ingresar</button> </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 8" [id]="8" [color]="'rojo'" [titulo]="'¿CÓMO CALCULAMOS TU IMPUESTO?'">
+        <div class="contenido">Aquí verás cómo se calcula el impuesto <strong>urbano edificado y baldío.</strong></div>
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá N° de cuenta</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary rojo">Ver</button> </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 9" [id]="9" [color]="'rojo'" [titulo]="'DESCARGÁ EL INFORME DEL INMUEBLE'">
+          <div class="consultar">
+            <iframe src="https://app.rentascordoba.gob.ar/rentas/servlet/wpinformedeudainmobiliario" frameborder="0"></iframe>
+          </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 10" [id]="10" [color]="'rojo'" [titulo]="'CONSUTÁ SI ESTAS EXENTO'">
+        <div class="contenido">Aquí podrás consultar si contás con el beneficio de la exención por <strong>adulto mayor
+            o vulnerabilidad social,
+          </strong>o enviar una solicitud para que sea analizada.</div>
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá N° de cuenta</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary rojo">Consultar</button> </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 11" [id]="11" [color]="'rojo'" [titulo]="'¿ALGÚN DATO TE GENERA DUDAS?'">
+        <div class="contenido">
+          Podés solicitar la revisión de la información registrada en Catastro (superficie de la tierra, superficie
+          total edificada, mejoras descubiertas como piletas y canchas, ubicación o dirección del inmueble, valor del
+          impuesto).
+          Seguí los siguientes pasos:<br><br>
+          <ol style="list-style:decimal">
+            <li>Ingresá a la web de Catastro haciendo <a href="https://visualizadorcatastral.cba.gov.ar" target="_blank"><strong>clic aquí</strong></a> </li>
+            <li>Completá el número de cuenta del inmueble</li>
+            <li>Solicitá la revisión haciendo click en “…realizar un RECLAMO AQUÍ”*</li>
+            <small> *Requiere iniciar sesión con Ciudadano Digital  (<a href="http://ciudadanodigital.cba.gov.ar/que-es-ciudadano-digital" target="_blank"><strong>CiDi</strong></a>) </small> 
+          </ol>
+
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 12" [id]="12" [color]="'rojo'" [titulo]="'REGISTRÁ TU INMUEBLE COMO BIEN DE FAMILIA'">
+        <div class="contenido">
+          Podés registrar tu inmueble como Bien de Familia siempre que cumplas con los siguientes requisitos:
+          <br><br>
+          <ol style="list-style:decimal">
+            <li>El solicitante debe ser titular único del dominio registrado que desee afectar y debe estar construido
+              sobre un solo lote.</li>
+            <li>Al menos uno de los beneficiarios debe habitar efectivamente el inmueble.</li>
+            <li>Sólo una vivienda puede ser registrada como Bien de Familia.</li>
+          </ol> 
+          Ingresá al sitio de Bien de Familia haciendo <a href="http://biendefamilia.cba.gov.ar/" target="_blank"><strong>clic aquí</strong></a> <br>
+        <small> *Requiere iniciar sesión con Ciudadano Digital (<a href="http://ciudadanodigital.cba.gov.ar/que-es-ciudadano-digital" target="_blank"><strong>CiDi</strong></a>) Nivel 2</small> 
+        </div>
+      </app-acordeon>
+    </ng-container>
+    <ng-container *ngIf="seccionName === 'Automotor'">
+        <div class="contenido">A partir de 2019 el impuesto automotor se pagará en 12 cuotas, la primera vencerá en febrero y la última en enero de 2020. </div>
+<app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 3" [id]="3" [color]="'verde'" [titulo]="'PAGÁ EL 2019'">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="consultar">
+              <div class="text"><label for="patente">Ingresá N° de patente</label></div>
+              <div class="campo"> <input type="text" class="form-control" [(ngModel)]="idObjAutomotor"></div>
+              <div class="boton"><button class="btn-primary verde" (click)="consultarDeuda('A', idObjAutomotor)">Consultar</button> </div>
+            </div>
+          </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 4" [id]="4" [color]="'verde'" [titulo]="tituloDebitoAutomatico">
+        <div class="contenido">Podés adherir el impuesto con el CBU de tu cuenta bancaria, tarjeta de crédito o –en el
+          caso de empleados y jubilados provinciales- el recibo digital.</div>
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá N° de patente</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary verde">Ingresar</button> </div>
+        </div>
+      </app-acordeon>
+
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 5" [id]="5" [color]="'verde'" [titulo]="'DESCARGÁ EL INFORME DE TU AUTO'">
+        <div class="contenido">Aquí podés ver si tenés deuda, tu auto está exento o si posee el componente municipal.</div>
+        <div class="consultar">
+          <iframe src="https://app.rentascordoba.gob.ar/rentas/servlet/wpinformedeudaautomotor" frameborder="0"></iframe>
+          <!-- <div class="text"><label for="patente">Ingresá N° de patente</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary verde">Descargar</button> </div> -->
+        </div>
+      </app-acordeon>
+
+
+    </ng-container>
+    <ng-container *ngIf="seccionName === 'Embarcaciones'">
+        <div class="contenido">A partir de 2019 el impuesto a las embarcaciones se pagará en 12 cuotas, la primera vencerá en febrero y la última en enero de 2020. </div>
+	<app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 0" [id]="0" [color]="'celeste'" [titulo]="'PAGÁ EL 2019'">
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá Dominio</label></div>
+          <div class="campo"> <input type="text" class="form-control" [(ngModel)]="idObjEmbarcacion"></div>
+          <div class="boton"><button class="btn-primary turquesa" (click)="consultarDeuda('N', idObjEmbarcacion)">Consultar</button> </div>
+        </div>
+      </app-acordeon>
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 1" [id]="1"[color]="'celeste'" [titulo]="tituloDebitoAutomatico">
+        <div class="contenido">Podés adherir el impuesto con el CBU de tu cuenta bancaria, tarjeta de crédito o –en el
+          caso de empleados y jubilados provinciales- el recibo digital.</div>
+        <div class="consultar">
+          <div class="text"><label for="patente">Ingresá Dominio</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary turquesa">Ingresar</button> </div>
+        </div>
+      </app-acordeon>
+
+      <app-acordeon (onAcordeonSelected)="cambiarAcordeonActivo($event)" [contentHide]="acordeonActivo !== 2" [id]="2" [color]="'celeste'" [titulo]="'DESCARGÁ EL INFORME DE TU EMBARCACIÓN'">
+        <div class="contenido">Aquí podés ver si tenés deuda y la base imponible de tu embarcación NUEVO CONVENIO</div>
+        <div class="consultar">
+          <iframe src="https://app.rentascordoba.gob.ar/rentas/servlet/wpinformedeudaembarcaciones" frameborder="0"></iframe>
+        </div>
+        <!-- <div class="consultar">
+          <div class="text"><label for="patente">Ingresá Dominio</label></div>
+          <div class="campo"> <input type="text" class="form-control"></div>
+          <div class="boton"><button class="btn-primary turquesa">Descargar</button> </div>
+        </div> -->
+      </app-acordeon>
+
+
+    </ng-container>
+
+    <ng-template #ingresaCuenta>
+
+    </ng-template>
+
+    <div class="spacing-top"></div> <!-- agrega un espacio al final de la seccion -->
+  </div>
+</div>
